@@ -451,3 +451,42 @@ class Program
     }
 }
 
+
+=================================================================================================================
+16. Incremental Assignment
+
+1) Write code for accepting FirstName, LastName from the user.
+2) Assuming firstname as userid and lastname as password, print whether the user is successfully logged in or not.
+3) On successful login, Greet the user with a string message "Welcome to my app"
+
+using System;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Web.Security;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Enter your First Name");
+		String FirstName= Console.ReadLine();
+		
+		Console.WriteLine("Enter your Last Name");
+		String LastName= Console.ReadLine();
+		
+		Console.WriteLine("UserId {0}, Password {1}", FirstName , LastName);
+		//Console.WriteLine(S);
+            if (login < 18) 
+            {
+              Console.WriteLine("Good day.");
+            } 
+            else 
+            {
+              Console.WriteLine("Good evening.");
+            }
+
+
+
+	}
+}
