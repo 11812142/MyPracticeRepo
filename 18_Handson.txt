@@ -477,14 +477,12 @@ public class Program
 		
 		Console.WriteLine("UserId {0}, Password {1}", FirstName , LastName);
 		//Console.WriteLine(S);
-            if (login < 18) 
-            {
-              Console.WriteLine("Good day.");
-            } 
-            else 
-            {
-              Console.WriteLine("Good evening.");
-            }
+                bool FirstName = true;
+                bool Lastname = true;
+                Console.WriteLine(Firstname);   // Outputs True for 1st name
+                Console.WriteLine(Lastname);
+            
+                Console.WriteLine("Welcome to my app");
 
 
 
