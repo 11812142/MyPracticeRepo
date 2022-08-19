@@ -1,0 +1,453 @@
+1. Write a C# Sharp program to swap two numbers. 
+Note: Do it using swapbyvalue and swapbyreference
+Input the First Number : 5
+Input the Second Number : 6
+Expected Output:
+After Swapping :
+First Number : 6
+Second Number : 5
+
+using System;  
+  public class SwapExample  
+   {  
+     public static void Main(string[] args)  
+      {  
+       int  a=5, b=10;            
+       Console.WriteLine("Before swap a= "+a+" b= "+b);    
+       a=a*b; //a=50 (5*10)      
+       b=a/b; //b=5 (50/10)      
+       a=a/b; //a=10 (50/5)    
+       Console.Write("After swap a= "+a+" b= "+b);       
+     }  
+  }
+=================================================================================================================================
+2. Write a C# Sharp program to print the output of multiplication of three numbers which will be entered by the user. 
+Input the first number to multiply: 2
+Input the second number to multiply: 3
+Input the third number to multiply: 6
+Expected Output:
+2 x 3 x 6 = 36
+
+using System;
+public class Exercise6
+{
+  public static void Main()
+  {
+    int num1, num2, num3;
+     
+    Console.Write("Input the first number to multiply: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+     
+    Console.Write("Input the second number to multiply: ");
+    num2 = Convert.ToInt32(Console.ReadLine());
+     
+    Console.Write("Input the third number to multiply: ");
+    num3 = Convert.ToInt32(Console.ReadLine());
+     
+    int result = num1 * num2 * num3;
+    Console.WriteLine("Output: {0} x {1} x {2} = {3}", 
+                        num1, num2, num3, result);
+  }
+}
+
+===================================================================================================================================
+3. Write a C# Sharp program to print on screen the output of adding, subtracting, multiplying and dividing of two numbers which will be entered by the user. 
+Input the first number: 25
+Input the second number: 4
+Expected Outp
+from Sulakshana Deore (Trainer) to All Attendees:
+Expected Output:
+25 25 25 25
+25252525
+25 25 25 25
+25252525
+
+using System;
+public class Exercise7
+{
+    public static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num1= Convert.ToInt32(Console.ReadLine());
+ 
+        Console.Write("Enter another number: ");
+        int num2= Convert.ToInt32(Console.ReadLine());
+   
+        Console.WriteLine("{0} + {1} = {2}", num1, num2, num1+num2);
+        Console.WriteLine("{0} - {1} = {2}", num1, num2, num1-num2);
+        Console.WriteLine("{0} x {1} = {2}", num1, num2, num1*num2);
+        Console.WriteLine("{0} / {1} = {2}", num1, num2, num1/num2);
+        Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1%num2);
+   }
+}
+
+
+====================================================================================================
+
+4. Write a C# Sharp program that takes four numbers as input to calculate and print the average. 
+Test Data:
+Enter the First number: 10
+Enter the Second number: 4
+Enter the Second number: 4
+Enter the Second number: 4
+it shud print the answer of 22/4
+
+using System;
+using System.IO;
+public class Exercise9
+{
+  public static void Main()
+  {
+     double number1,number2,number3,number4;
+      
+     Console.Write("Enter the First number: ");
+     number1 = Convert.ToDouble(Console.ReadLine());
+ 
+     Console.Write("Enter the Second number: ");
+     number2 = Convert.ToDouble(Console.ReadLine());
+ 
+     Console.Write("Enter the third number: ");
+     number3 = Convert.ToDouble(Console.ReadLine());
+ 
+     Console.Write("Enter the fourth number: ");
+     number4 = Convert.ToDouble(Console.ReadLine());
+ 
+     double result = (number1 + number2 + number3 + number4) / 4;
+     Console.WriteLine("The average of {0}, {1}, {2}, {3} is: {4} ",
+  number1, number2, number3, number4, result);
+   }
+}
+
+
+============================================================================================
+
+5. Write a C# Sharp program to that takes three numbers(x,y,z) as input and print the output of (x+y).z and x.y + y.z. 
+Test Data:
+Enter first number - 5
+Enter second number - 6
+Enter third number - 7
+Expected Output:
+Result of specified numbers 5, 6 and 7, (x+y).z is 77 and x.y + y.z is 72
+
+using System;
+public class Exercise10
+{
+  public static void Main()
+  {
+    int number1, number2, number3;
+ 
+    Console.Write("Enter first number - ");
+    number1 = Convert.ToInt32(Console.ReadLine());
+     
+    Console.Write("Enter second number - ");
+    number2 = Convert.ToInt32(Console.ReadLine());
+ 
+    Console.Write("Enter third number - ");
+    number3 = Convert.ToInt32(Console.ReadLine());
+ 
+    Console.Write("Result of specified numbers {0}, {1} and {2}, (x+y)·z is {3} and x·y + y·z is {4}\n\n",
+        number1, number2, number3, ((number1+number2)*number3), (number1*number2+number2*number3));
+  }
+}
+
+
+=============================================================================================
+
+Write a C# Sharp program that takes an age (for example 20) as input and prints something as "You look older than 20". 
+Test Data:
+Enter your age - 25
+Expected Output:
+You look older than 25
+
+using System;
+public class Exercise11
+{
+  public static void Main()
+  {
+    int age;
+    Console.Write("Enter your age ");
+    age = Convert.ToInt32(Console.ReadLine());
+    Console.Write("You look younger than {0} ",age);
+  }
+}
+
+
+============================================================================================
+
+Write a C# program to that takes a number as input and display it four times in a row (separated by blank spaces), and then four times in the next row, with no separation. 
+You should do it two times: Use Console. Write and then use {0}. 
+Test Data:
+Enter a digit: 25
+Expected Output:
+25 25 25 25
+25252525
+25 25 25 25
+25252525
+
+using System;
+public class Exercise12
+{
+    public static void Main()
+    {
+        int num; 
+  
+        Console.WriteLine("Enter a digit: ");
+        num = Convert.ToInt32( Console.ReadLine() );
+  
+        // Part A: "num num num num" using Write
+        Console.Write( num );
+        Console.Write(" ");
+        Console.Write( num );
+        Console.Write(" ");
+        Console.Write( num );
+        Console.Write(" ");
+        Console.Write( num );
+        Console.WriteLine();
+  
+        // Part B: "numnumnumnum" using Write
+        Console.Write( num );
+        Console.Write( num );
+        Console.Write( num );
+        Console.WriteLine( num );
+        Console.WriteLine();
+  
+        // Part C: "num num num num" using {0}
+        Console.WriteLine("{0} {0} {0} {0}", num);
+  
+        // Part D: "numnumnumnum" using {0}
+        Console.WriteLine("{0}{0}{0}{0}", num);
+   }
+}
+
+
+============================================================================================
+
+Write a C# program that takes a number as input and then displays a rectangle of 3 columns wide and 5 rows tall using that digit. 
+Test Data:
+Enter a number: 5
+Expected Output:
+555
+5 5
+5 5
+5 5
+555
+
+using System;
+public class Exercise13
+{
+    public static void Main()
+    {
+        int x;
+         
+        Console.Write("Enter a number: ");
+        x=Convert.ToInt32(Console.ReadLine());
+     
+        Console.WriteLine("{0}{0}{0}",x);
+        Console.WriteLine("{0} {0}",x);
+        Console.WriteLine("{0} {0}",x);
+        Console.WriteLine("{0} {0}",x);
+        Console.WriteLine("{0}{0}{0}",x);
+    }
+}
+
+
+=========================================================================================
+
+Write a C# program to convert from celsius degrees Kelvin to Fahrenheit. 
+Test Data:
+Enter the amount of celsius: 30
+Expected Output:
+Kelvin = 303
+Fahrenheit = 86
+
+using System;
+public class Exercise14
+{
+   public static void Main( )
+    {
+        Console.Write("Enter the amount of Celsius: "); 
+        int celsius = Convert.ToInt32(Console.ReadLine());
+ 
+        Console.WriteLine("Kelvin = {0}", celsius + 273);
+        Console.WriteLine("Fahrenheit = {0}", celsius * 18 / 10 + 32);
+    }
+}
+
+
+=================================================================================================
+
+Write a C# program to check two given integers and return true if one is negative and one is positive. 
+Input first integer:
+-5
+Input second integer: 1
+Expected Output: true
+
+using System;
+using System.Collections.Generic;
+
+public class Exercise18 {
+  static void Main(string[] args)
+        {
+           Console.WriteLine("\nInput first integer:");  
+           int x = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Input second integer:");  
+           int y = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Check if one is negative and one is positive:");
+           Console.WriteLine((x < 0 && y > 0) || (x > 0 && y < 0));
+        }
+}
+
+
+================================================================================================
+
+Write a C# program to check two given integers and return true if both are positive. 
+Input first integer:5
+Input second integer: 1
+Expected Output: true
+
+using System;
+using System.Collections.Generic;
+
+public class Exercise18 {
+  static void Main(string[] args)
+        {
+           Console.WriteLine("\nInput first integer:");  
+           int x = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Input second integer:");  
+           int y = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Check if both is positive:");
+           //Console.WriteLine((x > 0 && y > 0) || (x > 0 && y < 0));
+        }
+}
+
+===============================================================================================================
+
+
+12.Check if the given string is nullorEmpty, use Parse and return true or false accordinlgy.
+
+using System;
+public class Exercise12
+{
+  public static void Main()
+  {
+    string str="";
+	string str1 = string.Empty;
+	string str2;
+ 
+    Console.Write("Enter first number - ");
+    string i1 = Console.ReadLine();
+     
+    Console.Write("Enter second number - ");
+    string i2 = Console.ReadLine();
+ 
+    bool b1 = string.IsNullOrEmpty(i1);
+    Console.Writeline(b1);
+	
+    bool b2 = string.IsNullOrEmpty(i2);
+    Console.Writeline(b2);
+  }
+}
+==================================================================================================================
+
+
+
+13. C# program to convert a meter into kilo-meter and vice versa
+using System;
+
+public class Distance
+{
+    public static double MeterToKilometer(double meter)
+    {
+        double KM = 0;
+
+        KM = meter / 1000;
+
+        return KM;
+    }
+
+    public static double KilometerToMeter(double km)
+    {
+        double METER = 0;
+
+        METER = km * 1000;
+ 
+        return METER;
+    }
+
+    static void Main()
+    {
+        double meter = 0;
+        double km    = 0;
+
+        Console.Write("Enter the value of meter : ");
+        meter = double.Parse(Console.ReadLine());
+
+        km = MeterToKilometer(meter);
+        Console.WriteLine("Kilometer : "+km+"km");
+
+        Console.Write("Enter the value of kilometer : ");
+        km = double.Parse(Console.ReadLine());
+
+        meter = KilometerToMeter(km);
+        Console.WriteLine("Meter : " + meter + "m");
+
+    }
+}
+
+====================================================================================================
+
+
+14. C# program to convert a temperature from Celsius to Fahrenheit.
+Formula: fahrenheit = (celsius * 9) / 5 + 32;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo {
+
+   class MyApplication {
+
+      static void Main(string[] args) {
+
+         double fahrenheit;
+
+         double celsius = 36;
+         Console.WriteLine("Celsius: " + celsius);
+
+         fahrenheit = (celsius * 9) / 5 + 32;
+         Console.WriteLine("Fahrenheit: " + fahrenheit);
+
+         Console.ReadLine();
+      }
+   }
+}
+
+=========================================================================================================
+
+15. C# program to convert the US dollar into Indian rupees
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+            
+        double usd    = 0;
+        double inr    = 0;
+        double value  = 0;
+            
+        Console.Write("Enter amount in USD: ");
+        usd = double.Parse(Console.ReadLine());
+            
+        Console.Write("Enter the USD value :");
+        value = double.Parse(Console.ReadLine());
+           
+        inr = usd * value;
+        Console.WriteLine("USD "+usd+"-> INR "+inr);
+    }
+}
+

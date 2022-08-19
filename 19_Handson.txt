@@ -1,0 +1,331 @@
+1. C# program to read two number and find maximum, minimum number 
+=====================================================================================================
+2. C# program to find largest of 3 numbers (using nesed, if..else.if)
+======================================================================================================
+3. C# program to  compare with character with character and whether they are equal or not.
+======================================================================================================4. program to check given strings are equal or not using (==) opt
+======================================================================================================
+5. Program to enter the two number and check which is biggest.
+====================================================================================================
+6. Program to enter the year and check is leap or not
+====================================================================
+from ananth.b@mphasis.com to All Participants:
+7th ma'am
+from Sulakshana Deore (Trainer) to All Participants:
+7. Input marks in three subjects calculate total marks and percentage conditions are
+ per <35         fail,                           35-45                 third
+45-60      second,                 60 and above       first
+=============================================================================================
+8. Program to print this pattern
+*
+**
+***
+****
+*****
+=============================================================================================
+9.Write a program in C# Sharp to display the n terms of odd natural number and their sum.
+============================================================================================
+10)Write a program in C# Sharp to display the number in reverse order. Go to the editor
+Test Data :
+Input a number: 12345
+Expected Output :
+The number in reverse order is : 54321
+=======================================================
+11) Write a program in C# Sharp to find the number and sum of all integer between 100 and 200 which is divisible by 9
+=============================================================
+13) Create a program that prompts a user for input, accepts an integer, then evaluates whether that input is zero, odd or even, a multiple of 10, or too large (more than 100) by using multiple levels of if statements.
+from Sulakshana Deore (Trainer) to All Participants:
+14) Do the above program using switch case.
+from Sulakshana Deore (Trainer) to All Participants:
+15) Create a program that initializes a variable i at 0 and counts up, and initializes a second variable j at 25 and counts down. Use a single for loop to increment i and decrement j simultaneously, and output the values of i and j at each iteration of the loop. When i is greater than j, end the loop and print out the message “Crossed over!”
+from Sulakshana Deore (Trainer) to All Participants:
+16) You are making a game! The player tries to shoot an object and can hit or miss it.
+The player starts with 100 points, with a hit adding 10 points to the player’s score, and a miss deducting 20 points.
+Your program needs to take 4 action results as input ("hit" or "miss"), calculate and output the player’s remaining points
+EXAMPLE INPUT:
+HIT
+MISS
+HIT
+HIT
+EXAMPLE OUTPUT: 110
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+SOLUTIONS
+
+
+using System;
+using System.IO;
+using System.Text;
+
+namespace IncludeHelp
+{
+    class Test
+    {
+        // Main Method 
+        static void Main(string[] args)
+        {
+            int a;
+            int b;
+            int min;
+            int max;
+
+            //input numbers
+            Console.Write("Enter first number : ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            //finding max number using if-else
+            if (a > b)
+                max = a;
+            else
+                max = b;
+
+            //finding min number using if else
+            if (a < b)
+                min = a;
+            else
+                min = b;
+
+            //printing
+            Console.WriteLine("Using if-else...");
+            Console.WriteLine("Minimum number = {0}", min);
+            Console.WriteLine("Maximum number = {0}", max);
+
+            //finding max number using ternary operator
+            max = (a > b) ? a : b;
+
+            //finding min number using ternary operator
+            min = (a < b) ? a : b;
+
+            //printing
+            Console.WriteLine("Using Ternary operator...");
+            Console.WriteLine("Minimum number = {0}", min);
+            Console.WriteLine("Maximum number = {0}", max);
+
+            //hit ENTER to exit the program
+            Console.ReadLine();
+        }
+//2
+{
+            //1
+            int first, second, third;
+
+            //2
+            Console.WriteLine("Enter the first number : ");
+            first = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the second number : ");
+            second = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the third number : ");
+            third = int.Parse(Console.ReadLine());
+
+            //3
+            if (first > second)
+            {
+                //4
+                if (first > third)
+                {
+                    Console.WriteLine("largest number : " + first);
+                }
+                else
+                {
+                    Console.WriteLine("largest number : " + third);
+                }
+            }
+            else
+            {
+                if (second > third)
+                {
+                    Console.WriteLine("largest number : " + second);
+                }
+                else
+                {
+                    Console.WriteLine("largest number : " + third);
+                }
+            }
+        }
+//3
+     {
+		char c1,c2;
+		
+		Console.WriteLine("Enter the first character : ");
+		c1 = Console.ReadLine()[0];
+		
+        Console.WriteLine("Enter the second character : ");
+        c2 = Console.ReadLine()[0];
+
+        if(c1 == c2)
+			Console.WriteLine("Both characters are equal");
+		else
+			Console.WriteLine("Characters are not equal");
+	}
+
+//4
+    {
+    string str1 = "geeks";
+    string str2 = "geeks";
+     
+    // Here we use == operator to check 
+    // the equality of the strings
+    Console.WriteLine(str1 == str2);
+}
+
+
+//5
+
+{
+      var val = new int[] {
+         99,
+         35,
+         26,
+         87
+      };
+
+      var maxNum = val.Max(z => z);
+      Console.WriteLine("Maximum Number: " + maxNum);
+}
+
+//6
+
+{
+            Console.Write("Enter the Year in Four Digits: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            {
+                Console.WriteLine("{0} is a Leap Year", year);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a Leap Year", year);
+            }
+            Console.ReadKey();
+        }
+
+//7
+
+        {
+    double rl,phy,che,ca,total;
+    double per;
+    string nm,div;
+
+    Console.Write("\n\n");
+    Console.Write("Calculate the total, percentage marks of three subjects:\n");
+    Console.Write("-------------------------------------------------------------------------------");
+    Console.Write("\n\n");
+
+
+    Console.Write("Input the Roll Number of the student :");
+    rl = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Input the Name of the Student :");
+    nm = Console.ReadLine();
+
+    Console.Write("Input  the marks of Physics : ");
+    phy= Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input  the marks of  Chemistry : ");
+    che = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input  the marks of Computer Application : ");
+    ca = Convert.ToInt32(Console.ReadLine());
+
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+	 div="first";
+    else
+	if (per<35&&per>45)
+	    div="Third";
+	else
+	    if (per<45&&per>60)
+		div="Second";
+	     else
+		div="Fail";
+
+       Console.Write("\nRoll No : {0}\nName of Student : {1}\n",rl,nm);
+       Console.Write("Marks in Physics : {0}\nMarks in Chemistry : {1}\nMarks in Computer Application : {2}\n",phy,che,ca);
+       Console.Write("Total Marks = {0}\nPercentage = {1}\nDivision = {2}\n",total,per,div);
+}
+
+
+//8
+{
+int x, y;
+for (x = 1; x <= 6; x++)
+{
+for (y = 1; y <= x; y++)
+{
+Console.Write("*");
+}
+Console.WriteLine();
+}
+Console.ReadLine();
+}
+
+
+//9
+
+int i,n,sum=0;
+	Console.Write("\n\n");
+    Console.Write("Display the sum of n odd natural number:\n");
+    Console.Write("------------------------------------------");
+    Console.Write("\n\n");   
+
+   Console.Write("Input number of terms : ");
+   n= Convert.ToInt32(Console.ReadLine());   
+   Console.Write("\nThe odd numbers are :");
+   for(i=1;i<=n;i++)
+   {
+     Console.Write("{0} ",2*i-1);
+     sum+=2*i-1;
+   }
+   Console.Write("\nThe Sum of odd Natural Number upto {0} terms : {1} \n",n,sum);
+  }
+
+
+//10
+
+{
+    int num,r,sum=0,t;
+	
+	Console.Write("\n\n");
+    Console.Write("Display the number in reverse order:\n");
+    Console.Write("--------------------------------------");
+    Console.Write("\n\n");  	
+	
+
+    Console.Write("Input a number: ");
+    num = Convert.ToInt32(Console.ReadLine()); 	
+
+    for(t=num;t!=0;t=t/10)
+	{
+         r=t % 10;
+         sum=sum*10+r;
+    }
+Console.Write("The number in reverse order is : {0} \n",sum);
+  }
+
+
+//11,12
+   {
+   int i, sum=0;
+   
+	Console.Write("\n\n");
+    Console.Write("Find the number and sum of all integer between 100 and 200, divisible by 9\n");
+    Console.Write("-----------------------------------------------------------------------------");
+    Console.Write("\n\n");     
+   
+   Console.Write("Numbers between 100 and 200, divisible by 9 : \n");
+   for(i=101;i<200;i++)
+   {
+     if(i%9==0)
+     {
+       Console.Write("{0}  ",i);
+       sum+=i;
+     }
+   }
+   Console.Write("\n\nThe sum : {0} \n",sum);
+   }
+   
+
