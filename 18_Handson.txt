@@ -1,5 +1,5 @@
 1. Write a C# Sharp program to swap two numbers. 
-Note: Do it using swapbyvalue and swapbyreference
+//Note: Do it using swapbyvalue and swapbyreference
 Input the First Number : 5
 Input the Second Number : 6
 Expected Output:
@@ -29,7 +29,7 @@ Expected Output:
 2 x 3 x 6 = 36
 
 using System;
-public class Exercise6
+public class Problem2
 {
   public static void Main()
   {
@@ -63,7 +63,7 @@ Expected Output:
 25252525
 
 using System;
-public class Exercise7
+public class Problem3
 {
     public static void Main()
     {
@@ -94,7 +94,7 @@ it shud print the answer of 22/4
 
 using System;
 using System.IO;
-public class Exercise9
+public class Problem4
 {
   public static void Main()
   {
@@ -130,7 +130,7 @@ Expected Output:
 Result of specified numbers 5, 6 and 7, (x+y).z is 77 and x.y + y.z is 72
 
 using System;
-public class Exercise10
+public class Problem5
 {
   public static void Main()
   {
@@ -153,14 +153,14 @@ public class Exercise10
 
 =============================================================================================
 
-Write a C# Sharp program that takes an age (for example 20) as input and prints something as "You look older than 20". 
+6. Write a C# Sharp program that takes an age (for example 20) as input and prints something as "You look older than 20". 
 Test Data:
 Enter your age - 25
 Expected Output:
 You look older than 25
 
 using System;
-public class Exercise11
+public class Problem6
 {
   public static void Main()
   {
@@ -174,7 +174,7 @@ public class Exercise11
 
 ============================================================================================
 
-Write a C# program to that takes a number as input and display it four times in a row (separated by blank spaces), and then four times in the next row, with no separation. 
+7. Write a C# program to that takes a number as input and display it four times in a row (separated by blank spaces), and then four times in the next row, with no separation. 
 You should do it two times: Use Console. Write and then use {0}. 
 Test Data:
 Enter a digit: 25
@@ -185,7 +185,7 @@ Expected Output:
 25252525
 
 using System;
-public class Exercise12
+public class Problem7
 {
     public static void Main()
     {
@@ -222,7 +222,7 @@ public class Exercise12
 
 ============================================================================================
 
-Write a C# program that takes a number as input and then displays a rectangle of 3 columns wide and 5 rows tall using that digit. 
+8. Write a C# program that takes a number as input and then displays a rectangle of 3 columns wide and 5 rows tall using that digit. 
 Test Data:
 Enter a number: 5
 Expected Output:
@@ -233,7 +233,7 @@ Expected Output:
 555
 
 using System;
-public class Exercise13
+public class Problem8
 {
     public static void Main()
     {
@@ -253,7 +253,7 @@ public class Exercise13
 
 =========================================================================================
 
-Write a C# program to convert from celsius degrees Kelvin to Fahrenheit. 
+9. Write a C# program to convert from celsius degrees Kelvin to Fahrenheit. 
 Test Data:
 Enter the amount of celsius: 30
 Expected Output:
@@ -261,7 +261,7 @@ Kelvin = 303
 Fahrenheit = 86
 
 using System;
-public class Exercise14
+public class Problem9
 {
    public static void Main( )
     {
@@ -276,7 +276,7 @@ public class Exercise14
 
 =================================================================================================
 
-Write a C# program to check two given integers and return true if one is negative and one is positive. 
+10. Write a C# program to check two given integers and return true if one is negative and one is positive. 
 Input first integer:
 -5
 Input second integer: 1
@@ -285,7 +285,7 @@ Expected Output: true
 using System;
 using System.Collections.Generic;
 
-public class Exercise18 {
+public class Problem10 {
   static void Main(string[] args)
         {
            Console.WriteLine("\nInput first integer:");  
@@ -300,7 +300,7 @@ public class Exercise18 {
 
 ================================================================================================
 
-Write a C# program to check two given integers and return true if both are positive. 
+11. Write a C# program to check two given integers and return true if both are positive. 
 Input first integer:5
 Input second integer: 1
 Expected Output: true
@@ -308,7 +308,7 @@ Expected Output: true
 using System;
 using System.Collections.Generic;
 
-public class Exercise18 {
+public class Problem11 {
   static void Main(string[] args)
         {
            Console.WriteLine("\nInput first integer:");  
@@ -326,7 +326,7 @@ public class Exercise18 {
 12.Check if the given string is nullorEmpty, use Parse and return true or false accordinlgy.
 
 using System;
-public class Exercise12
+public class Problem12
 {
   public static void Main()
   {
