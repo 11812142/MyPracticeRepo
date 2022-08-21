@@ -316,7 +316,7 @@ public class Problem11 {
            Console.WriteLine("Input second integer:");  
            int y = Convert.ToInt32(Console.ReadLine());
            Console.WriteLine("Check if both is positive:");
-           //Console.WriteLine((x > 0 && y > 0) || (x > 0 && y < 0));
+           Console.WriteLine((x > 0 && y > 0) || (x > 0 && y < 0));
         }
 }
 
@@ -330,21 +330,21 @@ public class Problem12
 {
   public static void Main()
   {
-    string str="";
-	string str1 = string.Empty;
-	string str2;
- 
-    Console.Write("Enter first number - ");
-    string i1 = Console.ReadLine();
-     
-    Console.Write("Enter second number - ");
-    string i2 = Console.ReadLine();
- 
-    bool b1 = string.IsNullOrEmpty(i1);
-    Console.Writeline(b1);
-	
-    bool b2 = string.IsNullOrEmpty(i2);
-    Console.Writeline(b2);
+    string str = "";
+        string str1 = string.Empty;
+        string str2;
+
+        Console.Write("Enter first number - ");
+        string i1 = Console.ReadLine();
+
+        Console.Write("Enter second number - ");
+        string i2 = Console.ReadLine();
+
+        bool b1 = string.IsNullOrEmpty(i1);
+        Console.WriteLine(b1);
+
+        bool b2 = string.IsNullOrEmpty(i2);
+        Console.WriteLine(b2);
   }
 }
 ==================================================================================================================
@@ -459,32 +459,27 @@ class Program
 2) Assuming firstname as userid and lastname as password, print whether the user is successfully logged in or not.
 3) On successful login, Greet the user with a string message "Welcome to my app"
 
+
 using System;
-using System.Data;
-using System.Configuration;
-using System.Data.SqlClient;
-using System.Web.Security;
-					
-public class Program
+public class Problem16
 {
-	public static void Main()
-	{
-		Console.WriteLine("Enter your First Name");
-		String FirstName= Console.ReadLine();
-		
-		Console.WriteLine("Enter your Last Name");
-		String LastName= Console.ReadLine();
-		
-		Console.WriteLine("UserId {0}, Password {1}", FirstName , LastName);
-		//Console.WriteLine(S);
-                bool FirstName = true;
-                bool Lastname = true;
-                Console.WriteLine(Firstname);   // Outputs True for 1st name
-                Console.WriteLine(Lastname);
-            
-                Console.WriteLine("Welcome to my app");
-
-
-
-	}
+    public static void Main()
+     { 
+string first_name;
+string last_name;
+Console.WriteLine(  "enter the first name");
+first_name = Console.ReadLine();
+Console.WriteLine("enter the last name");
+last_name = Console.ReadLine();
+if(first_name=="userid" && last_name=="password")
+{
+    Console.WriteLine("user has succesfully login in");
+    Console.WriteLine("welcome to my app");
 }
+else
+{
+    Console.WriteLine("incorrect first_name and password");
+}
+}     
+}
+
