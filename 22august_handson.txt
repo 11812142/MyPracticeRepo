@@ -1,0 +1,706 @@
+1. Write a program in C# Sharp to store elements in an array and print it. 
+(consider array of 10 elements)
+Test Data:
+Input 10 elements in the array:
+element - 0 : 1
+element - 1 : 1
+element - 2 : 2
+.......
+Expected Output :
+Elements in array are: 1 1 2 3 4 5 6 7 8 9
+
+using System;
+public class Exercise1
+{
+    public static void Main()
+    {
+        
+        int[] arr = new int[10];
+        int i;
+        Console.Write("\n\nRead and Print elements of an array:\n");
+        Console.Write("-----------------------------------------\n");
+
+        Console.Write("Input 10 elements in the array :\n");
+        for (i = 0; i < 10; i++)
+        {
+            Console.Write("element - {0} : ", i);
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.Write("\nElements in array are: ");
+        for (i = 0; i < 10; i++)
+        {
+            Console.Write("{0}  ", arr[i]);
+        }
+        Console.Write("\n");
+    }
+}
+
+==========================================================================================
+2. Write a program in C# Sharp to read n number of values in an array and display it in reverse order. 
+Test Data :
+Input the number of elements to store in the array :3
+Input 3 number of elements in the array :
+element - 0 : 2
+element - 1 : 5
+element - 2 : 7
+Expected Output:
+The values store into the array are:
+2 5 7
+The values store into the array in reverse are :
+7 5 2
+
+using System;  
+public class Exercise2  
+{  
+    public static void Main() 
+{
+   int i,n;
+   int[] a= new int[100];
+   
+       Console.Write("\n\nRead n number of values in an array and display it in reverse order:\n");
+       Console.Write("------------------------------------------------------------------------\n");
+   
+   Console.Write("Input the number of elements to store in the array :");
+   n = Convert.ToInt32(Console.ReadLine());    
+   
+   
+   Console.Write("Input {0} number of elements in the array :\n",n);
+   for(i=0;i<n;i++)
+      {
+	  Console.Write("element - {0} : ",i);
+	  a[i] = Convert.ToInt32(Console.ReadLine()); 
+	  }
+      
+   Console.Write("\nThe values store into the array are : \n");
+   for(i=0;i<n;i++)
+     {
+	   Console.Write("{0}  ",a[i]);
+	 }
+ 
+   Console.Write("\n\nThe values store into the array in reverse are :\n");
+   for(i=n-1;i>=0;i--)
+      {
+	   Console.Write("{0} ",a[i]);
+	  }
+   Console.Write("\n\n");
+  } 
+} 
+
+
+=============================================================================================
+3. Write a program in C# Sharp to find the sum of all elements of the array. 
+Test Data :
+Input the number of elements to be stored in the array :3
+Input 3 elements in the array :
+element - 0 : 2
+element - 1 : 5
+element - 2 : 8
+Expected Output :
+Sum of all elements stored in the array is : 15
+
+using System;  
+public class Exercise3  
+{  
+    public static void Main() 
+{
+    int[] a= new int[100];
+    int i, n, sum=0;
+	
+	
+       Console.Write("\n\nFind sum of all elements of array:\n");
+       Console.Write("--------------------------------------\n");	
+
+       Console.Write("Input the number of elements to be stored in the array :");
+	   n = Convert.ToInt32(Console.ReadLine()); 
+   
+       Console.Write("Input {0} elements in the array :\n",n);
+       for(i=0;i<n;i++)
+        {
+	      Console.Write("element - {0} : ",i);
+		  a[i] = Convert.ToInt32(Console.ReadLine()); 
+	    }
+
+    for(i=0; i<n; i++)
+    {
+        sum += a[i];
+    }
+
+    Console.Write("Sum of all elements stored in the array is : {0}\n\n", sum);
+  }
+}
+
+
+==============================================================================================
+4) Create a array list of 5 elements and add, remove, count elements
+
+using System;
+using System.Collections;
+  
+class GFG {
+  
+    // Driver code
+    public static void Main()
+    {
+      ArrayList mylist = new ArrayList(10);
+
+            // adding elements to arraylist
+            mylist.Add("a");
+            mylist.Add("b");
+            mylist.Add("c");
+            mylist.Add("d");
+            mylist.Add("e");
+            mylist.Add("f");
+            foreach (var i in mylist)
+                Console.WriteLine(i);
+            // displaying the elements in arraylist
+            Console.WriteLine("number of elements in arraylist initially : " + mylist.Count);
+            Console.WriteLine("-------removing 2 element only------");
+            mylist.Remove("a");
+            mylist.Remove("b");
+            foreach (var i in mylist)
+                Console.WriteLine(i);
+            // removing all elements from arraylist
+            mylist.Clear();
+
+            // displaying the elements in arraylist
+            // after removing all the elements
+            Console.WriteLine("-----after removing all----------");
+            Console.WriteLine("number of elements in arraylist : " + mylist.Count);
+
+    }
+}
+==============================================================================================
+5) Create a jagged array to store classroom of the student, with number of students in each classroom
+and print it.
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Declare the array of two elements.
+            int[][] arr = new int[2][];
+
+            // Initialize the elements.
+            arr[0] = new int[5] { 1, 3, 5, 7, 9 };
+            arr[1] = new int[4] { 2, 4, 6, 8 };
+
+            // Display the array elements.
+            for (int i = 0; i < arr.Length; i++)
+            {
+                System.Console.Write("Element({0}): ", i);
+
+                for (int j = 0; j < arr[i].Length; j++)
+                {
+                    System.Console.Write("{0}{1}", arr[i][j], j == (arr[i].Length - 1) ? "" : " ");
+                }
+                System.Console.WriteLine();
+            }
+            // Keep the console window open in debug mode.
+
+            System.Console.ReadKey();
+     }
+}
+}
+================================================================================================
+6)Create a stack of numbers, push, pop,peek,count, print before pop and after pop.
+Find the topmost element on the stack.
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Stack s = new Stack(2);
+            //Dynamically grow themselves
+            s.Push(34);
+            s.Push(34.34f);
+            s.Push(34.56777d);
+            s.Push(new DateTime(2011, 11, 10));
+            s.Push("Hello");
+            s.Push('Y');
+            s.Push(true);
+            Console.WriteLine("------------Before Pop---------------");
+            foreach (var item in s)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("------------After Pop---------------");
+            object a1 = s.Pop();//true
+            Console.WriteLine(a1);
+            a1 = s.Pop();//Y
+            Console.WriteLine(a1);
+            a1 = s.Pop();//Hello
+            Console.WriteLine(a1);
+
+            int cnt = s.Count;
+            object p = s.Peek();//returns datetime
+            Console.WriteLine("Topmost Element = " + p);
+        }
+    }
+}
+===============================================================================================
+7)Queue of int numbers, enqueue, dequeue and peek elements.
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Console.WriteLine("----------------------");
+            Queue q = new Queue(10, 2);//FIFO--First in first out
+            q.Enqueue(45);
+            q.Enqueue(4567.45f);
+            q.Enqueue(33);
+            object a2 = q.Dequeue();//45
+            Console.WriteLine(a2);
+            object a3 = q.Peek();
+            Console.WriteLine(a3);
+        }
+    }
+}
+================================================================================================
+8)Create a hash table with int as key and value as string and add and print the elements.
+Remove any one entry from the hash table and print again
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Hashtable h = new Hashtable();
+            h.Add(1, "tea");
+            h.Add(2, "Coffee");
+            h.Add(3, "Coke");
+            h.Add(4, "Milk");
+            h.Add(5, "thumsup");
+            foreach (DictionaryEntry item in h)
+            {
+                Console.WriteLine(item.Key + "  " + item.Value);
+            }
+            Console.WriteLine("After Removing");
+            h.Remove(1);
+            foreach (DictionaryEntry item in h)
+            {
+                Console.WriteLine(item.Key + "  " + item.Value);
+
+            }
+        }
+    }
+}
+===============================================================================================
+9) Create a list of float numbers and print it.
+Also print in ascending and descending order.
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Console.WriteLine("--------------Print Array------------");
+            ArrayList al = new ArrayList();
+            al.Add(34.0f);
+            al.Add(445.11f);
+            al.Add(11.14f);
+            al.Add(34535.9f);
+            al.Add(444.55f);
+            al.Add(8.4f);
+            foreach (var item in al)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("--------------Ascending Order------------");
+            //al.Remove(34.0f);//first occurence of 34 in the arraylist
+            //al.RemoveAt(0);
+            //al.RemoveRange(0, 2);
+            al.Sort();
+            foreach (var item in al)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("--------------Descending Order------------");
+            al.Reverse();
+            foreach (var item in al)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+===============================================================================================
+10) Create a Dictionary of int as key and name as string and display the dictionary.
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Create a dictionary having key as integer type and value as string type
+            Dictionary<int, string> dictCity = new Dictionary<int, string>();
+
+            //Add items to the dictionary using Add method
+            dictCity.Add(1, "India");
+            dictCity.Add(2, "USA");
+            dictCity.Add(3, "UK");
+            dictCity.Add(4, "Russia");
+            dictCity.Add(5, "Germany");
+
+            foreach (KeyValuePair<int, string> dictItem in dictCity)
+            {
+                Console.WriteLine("Key : {0} , Value, {1}", dictItem.Key, dictItem.Value);//Prints dictionary items
+            }
+        }
+    }
+}
+=================================================================================================
+11) Also create a sorted list for Question 10.
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            Console.WriteLine("---------");
+            SortedList s1 = new SortedList();
+            foreach (KeyValuePair<int, string> dictItem in dictCity)
+            {
+                Console.WriteLine(dictItem.Key + "  " + dictItem.Value);
+            }
+        }
+    }
+}
+=================================================================================================
+12) Find the minimum and maximum element in an array
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            int[] array = { 10, 30, 40, 100, 170, 50, 20, 60 };
+            int max = array[0];
+            int min = array[0];
+            for (int i = 0; i <= array.Length - 1; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+                if (array[i] < min)
+                {
+                    min = array[i];
+                }
+            }
+            Console.WriteLine(max);
+            Console.WriteLine(min);
+        }
+    }
+}
+=================================================================================================
+13) Find the number of elements which are greater than 100
+(1,3,5,200,22,2244,213,111)
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        public static void Main()
+        {
+            int[] arr = { 1, 3, 5, 200, 22, 2244, 213, 111 };
+            int largeElement = arr.Max();
+            Console.WriteLine(largeElement);
+        }
+    }
+}
+================================================================================================
+14) Given a value N, find the number of ways to make change for N cents,
+ if we have infinite supply of each of S = { S1, S2, .. , SM } valued coins.
+Input:
+n = 4 , m = 3
+S[] = {1,2,3}
+Output: 4
+Explanation: Four Possible ways are:
+
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+
+using System.Diagnostics.Metrics;
+
+
+
+namespace Assigment3
+{
+
+    public class Assigment1
+    {
+        
+static int count(int[] S, int m, int n)
+        {
+            if (n == 0)
+                return 1;
+
+
+            if (n < 0)
+                return 0;
+
+            if (m <= 0)
+                return 0;
+
+
+            return count(S, m - 1, n) +
+                count(S, m, n - S[m - 1]);
+        }
+        public static void Main()
+        {
+            Console.Write("n = ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("m = ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Console.Write("arr = ");
+            int[] arr = new int[n];
+            var stringArray = Console.ReadLine().Split(' ');
+            for (var i = 0; i < m; i++)
+            {
+                arr[i] = int.Parse(stringArray[i]);
+            }
+            Console.WriteLine("Output = {0}", count(arr, m, n));
+            Console.ReadLine();
+}
+}
+
+
+==================================================================================================
+15) Given an array arr[] of size n, find the first repeating element. The element should occurs more than once and the index of its 
+first occurrence should be the smallest.
+ 
+Input:
+n = 7
+arr[] = {1, 5, 3, 4, 3, 5, 6}
+Output: 2
+Explanation: 
+5 is appearing twice and 
+its first appearence is at index 2 
+which is less than 3 whose first 
+occuring index is 3.
+
+//{ Driver Code Starts
+// Initial Template for C#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DriverCode {
+
+class GFG {
+    static void Main(string[] args) {
+        int testcases; // Taking testcase as input
+        testcases = Convert.ToInt32(Console.ReadLine());
+        while (testcases-- > 0) // Looping through all testcases
+        {
+
+            int n = Convert.ToInt32(Console.ReadLine());
+            var ip = Console.ReadLine().Trim().Split(' ');
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = int.Parse(ip[i]);
+            }
+            Solution obj = new Solution();
+            var res = obj.firstRepeated(arr, n);
+            Console.WriteLine(res);
+        }
+    }
+}
+}
+
+
+// } Driver Code Ends
+
+
+// User function Template for C#
+
+class Solution {
+    // Function to return the position of the first repeating element.
+  public
+    int firstRepeated(int[] arr, int n) {
+        // Your code here
+        {
+        var map = new Dictionary<int, int>();
+        var set = new SortedSet<int>();
+        for (int i = 0; i < n; i++)
+        {
+            if (!map.ContainsKey(arr[i]))
+            {
+                map[arr[i]] = i + 1;
+            }
+            else 
+            {
+                set.Add(map[arr[i]]);
+            }
+        }
+        foreach (int i in set)
+        {
+            return i;
+        }
+        return -1;
+    }
+        
+    }
+}
+
+
+
+
+//m-2
+public static void printFirstRepeating(int[] arr)
+            {
+                int min = -1;
+
+                // Creates an empty hashset
+                HashSet<int> set = new HashSet<int>();
+
+                // Traverse the input array from right to left
+                for (int i = arr.Length - 1; i >= 0; i--)
+                {
+                    // If element is already in hash set, update min
+                    if (set.Contains(arr[i]))
+                    {
+                        min = i;
+                    }
+
+                    else // Else add element to hash set
+                    {
+                        set.Add(arr[i]);
+                    }
+
+                }
+
+                // Print the result
+                if (min != -1)
+                {
+                    Console.WriteLine("The first repeating element is " + arr[min]);
+                }
+                else
+                {
+                    Console.WriteLine("There are no repeating elements");
+                }
+                Console.ReadLine();
+
+            }
+
+
+            // Driver method to test above method
+
+            public static void Main(string[] args)
+            {
+                int[] arr = new int[] { 10, 5, 3, 4, 3, 5, 6 };
+                printFirstRepeating(arr);
+                
+            }
+
+
+
+        }
