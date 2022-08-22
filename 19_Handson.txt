@@ -374,28 +374,41 @@ namespace IncludeHelp
         /*
         {
             int n;
-            Console.WriteLine("enter the inuput");
-            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a number: ");
+            n=Convert.ToInt32(Console.ReadLine());
+           
             if (n != 0)
             {
-                if (n % 2 == 0)
+                if (n % 2 == 0 )
                 {
-                    Console.WriteLine("given input is even");
-                }
-                else
-                {
-                    Console.WriteLine("given input is odd");
+                    Console.WriteLine("The given number is even");
+
                 }
 
-            }
-            else if (n = n*10)    
-            {
-                Console.WriteLine("given input is multiple of 10");
+               
+                else
+                {
+                    Console.WriteLine("the given number is odd");
+                }
             }
             else
             {
-                Console.WriteLine("given input is zero");
+                Console.WriteLine("The Given number is Zero");
+
             }
+
+            if (n > 100)
+            {
+                Console.WriteLine("The given number is greater than 100");
+            }
+
+            if (n % 10 == 0 && n!=0) { 
+                Console.WriteLine("The given number is multiple of 10");
+            
+            }
+            Console.ReadLine();
+
+
         }*/
 
 
@@ -403,24 +416,44 @@ namespace IncludeHelp
         /*
         {
             int n;
-            Console.WriteLine("enter the inuput");
+            Console.WriteLine("Enter a number: ");
             n = Convert.ToInt32(Console.ReadLine());
-            switch (n == 0)
+
+            switch (n != 0)
             {
+               
                 case true:
-                    Console.WriteLine("given inuput is zero");
-                    break;
-                case false:
-                    if (n % 2 == 0)
+                    if (n > 100)
                     {
-                        Console.WriteLine("given input is even");
+                        Console.WriteLine("Greater than 100");
                     }
+                    if(n%10 == 0)
+                    {
+                        Console.WriteLine("The given number is multiple of 10");
+                    }
+                    if (n%2 ==0)
+                    {
+                        Console.WriteLine("The given number is even");
+                        break;
+                    }
+                    
                     else
                     {
-                        Console.WriteLine("given input is odd");
+                        Console.WriteLine("The Given number is odd ");
+                        break;
+
+                    }
+                case false: { 
+                        Console.WriteLine("The given number is zero"); 
                     }
                     break;
+                    
+                   
+                    
             }
+
+
+            Console.ReadLine();
 
         }
         */
@@ -457,6 +490,18 @@ namespace IncludeHelp
         //    }
         //    Console.WriteLine(score);
         //}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
