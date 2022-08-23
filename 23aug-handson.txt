@@ -1,0 +1,360 @@
+
+
+1) Method to add 2 nos which have return type as void and call it in Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace aug_23_assignments
+{
+    internal class Program1
+    {
+        static void Main(string[] args)
+        {
+            ps1 ex = new ps1();
+
+            ex.sum(50, 20);
+        }
+    }
+        class ps1
+        { 
+            public void sum(int a, int b)
+            {
+                Console.WriteLine("SUM = " + (a + b));
+            }
+        }
+    }
+
+==================================================================================
+2) Method to add 2 nos which have return type as int and call it in Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace aug_23_assignments
+{
+    internal class Problem2
+    {
+        static void Main(string[] args)
+        {
+           
+                pratibha ex = new pratibha();
+
+               int result= ex.sums(50, 20);
+            Console.WriteLine("sum"+" "+result);
+            }
+        }
+    
+    class pratibha
+    {
+        public int sums(int a, int b)
+        {
+            int c = a + b;
+            return c;
+        }
+    }
+}
+
+======================================================================
+
+3) Create a struct of employee with empno,ename,sal,deptno.
+Create properties for the above 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace aug_23_assignments
+{
+    internal class Problem3
+    {
+        static void Main(string[] args)
+        {
+            employee e = new employee(101, "pratibha", 1500, 4);
+            Console.WriteLine("empid"+" "+e.emp_id);
+            Console.WriteLine("emp_name"+" "+e.emp_name);
+            Console.WriteLine("emp sal"+" "+e.sal);
+            Console.WriteLine("emp_depno"+" "+e.depno);
+         }
+    }
+    struct employee
+    {
+        public int emp_id;
+        public string  emp_name;
+        public int sal;
+        public int depno;
+
+        public employee(int emp_id,string emp_name,int sal,int depno)
+        {
+            this.emp_id = emp_id;
+            this.emp_name= emp_name;    
+            this.sal = sal; 
+            this.depno= depno;
+        }
+    }
+
+}
+
+========================================================================================
+4) Create a struct of employee with empno,ename,sal,deptno as fields
+and write methods to Accept and Display Data
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _23_aug_handson
+{
+    internal class Problem4
+    {
+        static void Main(string[] args)
+        {
+            Employee obj = new Employee();
+            obj.getdata();
+            obj.ShowData();
+        }
+    }
+    public struct Employee
+    {
+        public int EmpNo;
+        public string empName;
+        public int sal;
+        public int depno;
+
+        public Employee(int empno, string name, int salary, int dep)
+        {
+            EmpNo = empno;
+            empName = name;
+            sal = salary;
+            depno = dep;
+        }
+        public void getdata()
+        {
+            Console.WriteLine("enter the empno");
+            EmpNo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the empname");
+            empName = Console.ReadLine();
+            Console.WriteLine("enter the sal");
+            sal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the depno");
+            depno = Convert.ToInt32(Console.ReadLine());
+        }
+        public void ShowData()
+        {
+            Console.WriteLine("Employee No.=" + EmpNo);
+            Console.WriteLine("Employee Name=" + empName);
+            Console.WriteLine("Employee sal=" + sal);
+            Console.WriteLine("Employee dep.no.=" + depno);
+
+        }
+    }
+}
+
+===================================================================================
+5) Create a struct of employee with empno,ename,sal,deptno and create a array of 4 employees.
+write methods to Accept and Display Data
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _23_aug_handson
+{
+    internal class Problem5
+    {
+        static void Main(string[] args)
+        {
+
+            Employees[] emp = { new Employees(),
+                       new Employees(),
+                       new Employees(), new Employees()};
+
+        // Pass the array indexes with values as structures
+        emp[0].SetEmployee(1, "Riya", 20,11);
+        emp[1].SetEmployee(2, "Priya", 21,12);
+        emp[2].SetEmployee(3, "Aditya", 23,13);
+        emp[3].SetEmployee(4, "Aditi", 23, 14);
+        // Call the display method
+        emp[0].DisplayEmployee();
+        emp[1].DisplayEmployee();
+        emp[2].DisplayEmployee();
+        emp[3].DisplayEmployee();
+
+    }
+}
+public struct Employees
+{
+
+    // Declare three variables
+    // id, name and age
+    public int Id;
+    public string Name;
+    public int sal;
+    public int depno;
+
+    // Set the employee details
+    public void SetEmployee(int id, string name, int salr, int depnos)
+    {
+        Id = id;
+        Name = name;
+        sal = salr;
+        depno = depnos;
+    }
+
+    // Display employee details
+    public void DisplayEmployee()
+    {
+        Console.WriteLine("Employee:");
+        Console.WriteLine("\tId    : " + Id);
+        Console.WriteLine("\tName   : " + Name);
+        Console.WriteLine("\tsal   : " + sal);
+        Console.WriteLine("\tdepno  : " + depno);
+        Console.WriteLine("\n");
+    }
+}
+}
+
+=================================================================================
+6) create a enum of deptnames as Purchase=1,Sales=2,Training=3 and Accounts=4.
+Accept deptname as string and display deptnos.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _23_aug_handson
+{
+    internal class Problem6
+    {
+        enum deptnames 
+        {
+            Purchase = 1,
+            Sales = 2,
+            Training = 3,
+            Accounts = 4
+        };
+        public static void Main()
+        {
+            
+            foreach (string item in Enum.GetNames(typeof(deptnames)))
+            {
+                Console.WriteLine(item);
+            }
+            foreach (int item in Enum.GetValues(typeof(deptnames)))
+            //{
+            //    Console.WriteLine(item);
+
+            //}
+            {
+                Console.WriteLine(item + " : " + (deptnames)item);
+            }
+        }
+    }
+}
+
+=====================================================================================
+
+7) Write a program to handle Divide By Zero exception and call the stack trace to get the line number
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _23_aug_handson
+{
+    internal class Problem7and8
+    {
+        public static void Main()
+        {
+            int number1 = 3000;
+            int number2 = 0;
+
+            try
+            {
+                Console.WriteLine(number1 / number2);
+            }
+            catch (DivideByZeroException e)
+            
+            {
+                Console.WriteLine("An exception ({0}) occurred.",e.GetType().Name);
+                Console.WriteLine("Message:\n   {0}\n", e.Message);
+                Console.WriteLine("Division of {0} by zero.", number1);
+                Console.WriteLine("Stack Trace:\n   {0}\n", e.StackTrace);
+            }
+        }
+    }
+}
+
+==========================================================================================
+8)  Write a method to handle Divide By Zero exception and call the stack trace to get the line number by calling method in the main
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _23_aug_handson
+{
+    internal class Problem7and8
+    {
+        public static void Main()
+        {
+            int number1 = 3000;
+            int number2 = 0;
+
+            try
+            {
+                Console.WriteLine(number1 / number2);
+            }
+            catch (DivideByZeroException e)
+            
+            {
+                Console.WriteLine("An exception ({0}) occurred.",e.GetType().Name);
+                Console.WriteLine("Message:\n   {0}\n", e.Message);
+                Console.WriteLine("Division of {0} by zero.", number1);
+                Console.WriteLine("Stack Trace:\n   {0}\n", e.StackTrace);
+            }
+        }
+    }
+}
+
+=====================================================================================
+9) Write a program to accept employee data using the above structure.
+In the properties, write a validation to check empno and deptno not equal to zero.
+Also write validation for empname should not be null or empty
+
+/*
+Student[] students = new Student[2];
+            for (int i = 0; i < 2; i++)
+            {
+              
+                Console.WriteLine("Enter rollno");
+                int rollno=Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter name");
+                string name = Console.ReadLine();
+                students[i].AcceptData(rollno, name);
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                students[i].Display();
+            }
+            Console.Read();
+
+
+*/
+
+
